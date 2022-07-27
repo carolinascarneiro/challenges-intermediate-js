@@ -50,3 +50,61 @@ const convertToBaby = (array) => {
   }
   return array;
 }
+
+// We wrote a function, smallestPowerOfTwo(), which takes in an array.
+
+// Within our function, we create a new array called results. We then loop through the argument array and calculate the smallest power of two which is greater than or equal to the current element before using .push() to add it to results.
+
+// It’s not doing what we want. Can you fix our code, please?
+
+const numbers = [5, 3, 9, 30];
+
+const smallestPowerOfTwo = (arr) => {
+      let results = [];
+      // The 'outer' for loop - loops through each element in the array
+      for (let i = 0; i < arr.length; i++) {
+            number = arr[i];
+
+            // The 'inner' while loop - searches for smallest power of 2 greater than the given number
+            g = 1;
+            while (g < number) {
+                  g = g * 2;
+            }
+            results.push(g);
+      }
+      return results
+}
+
+console.log(smallestPowerOfTwo(numbers))
+
+// 1.
+// Write a function declineEverything() that takes in an array of strings and, using .forEach(), loops through each element in the array and calls politelyDecline() with each of them.
+
+// The .forEach() function should apply politelyDecline() directly; it should NOT merely receive an argument function that uses politelyDecline().
+
+// You can test your function when you’re ready by passing in the veggies array or by making your own array!
+
+// 2.
+// Now we need to get healthy! Write a function acceptEverything() that takes in an array of strings and loops through each element in the array and grudgingly accepts each of them, by logging to the console in the following format: 'Ok, I guess I will eat some [element].'
+
+// You can use any technique you want to accomplish this task. You can test your function when you’re ready by passing in the veggies array or by making your own array!
+
+const veggies = ['broccoli', 'spinach', 'cauliflower', 'broccoflower'];
+
+const politelyDecline = (veg) => {
+      console.log('No ' + veg + ' please. I will have pizza with extra cheese.');
+}
+
+// Write your code here:
+
+const declineEverything = (array) => {
+  array.forEach(politelyDecline);
+}
+
+const acceptOne = (veg) => {
+      console.log('Ok, I guess I will eat some ' + veg +'.');
+}
+
+const acceptEverything = (array) => {
+      array.forEach(acceptOne);
+}
