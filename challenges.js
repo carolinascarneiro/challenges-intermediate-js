@@ -16,20 +16,11 @@
 //     return newSentence;
 //   }
 
-// Solution with unpush
+// Solution with push plus slice (array methods)
 
 const reverseArray = (array) => {
-    console.log(array.length)
-    array.unshift(i);
-    console.log(array.length)
-    for (let i = array.length; i >= 0; i--) {
-      array.unshift(i);
-      console.log(array.length);
-      array.pop();
+    for (let i = array.length-1; i >= 0; i--) {
+        array.push(array[i]);
     }
-    return array;
-  }
-  
-  const sentence = [1, 2, 3, 4, 5];
-  
-  console.log(reverseArray(sentence))
+    return array.slice(array.length/2);
+}
