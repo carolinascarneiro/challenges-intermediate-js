@@ -128,3 +128,28 @@ return map1;
 }
 
 console.log(squareNums(numbers))
+
+// 1.
+// Write a function shoutGreetings() that takes in an array of strings and returns a new array. This new array should contain all the strings from the argument array but with capitalized letters and an exclamation point appended to the end: 'heya' will become 'HEYA!'
+
+// You can use any technique you want to accomplish this task.
+
+// You can test your function when you’re ready by passing in the greetings array or by making your own array!
+
+// Write your code here:
+
+// Naive solution
+const shoutGreetings = array => {
+    for (let i = 0; i < array.length; i++) {
+      array[i] = array[i].toUpperCase() + "!";
+    }
+    return array;
+  }
+  
+  // Feel free to uncomment out the code below to test your function!
+  /**/
+  const greetings = ['hello', 'hi', 'heya', 'oi', 'hey', 'yo'];
+  
+  console.log(shoutGreetings(greetings))
+  // Should print [ 'HELLO!', 'HI!', 'HEYA!', 'OI!', 'HEY!', 'YO!' ]
+  
