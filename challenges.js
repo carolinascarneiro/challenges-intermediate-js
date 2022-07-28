@@ -212,7 +212,7 @@ const justCoolStuff = (coolStuff, myStuff) => {
 const isTheDinnerVegan = array => {
     for (let i = 0; i < array.length ; i++) {
       for (let j = 0; j < array.length ; j++) {
-        return array[i]['source'] !== 'plant' ? false : true;
+        array[i]['source'] !== 'plant' ? false : true;
       }
     }
   }
@@ -226,3 +226,106 @@ const isTheDinnerVegan = array => {
   console.log(isTheDinnerVegan(meal))
   // Should print false
   
+
+
+
+
+// Write a function sortSpeciesByTeeth() that takes in an array of species objects in the format:
+
+// {speciesName: 'shark', numTeeth: 50 }
+// and sorts the array in ascending order based on the average number of teeth that species possesses (numTeeth) .
+
+// You’ll need to access each object’s .numTeeth property. Feel free to either write a named comparison function, or use an anonymous function for your argument to .sort().
+
+// You can test your function when you’re ready by passing in the speciesArray array or by making your own!
+
+const speciesArray = [
+    { speciesName: "shark", numTeeth: 50 },
+    { speciesName: "dog", numTeeth: 42 },
+    { speciesName: "alligator", numTeeth: 80 },
+    { speciesName: "human", numTeeth: 32 },
+  ];
+  
+  const sortSpeciesByTeeth = (speciesArray) => {
+    array = [];
+    for (let i = 0; i < speciesArray.length; i++) {
+      array[i] = speciesArray[i]["numTeeth"];
+    }
+  
+    array.sort();
+  
+    sortedArray = [];
+    for (let i = 0; i < speciesArray.length; i++) {
+      sortedArray[i] = speciesArray.find((item) => item.numTeeth === array[i]);
+    }
+    return sortedArray;
+  };
+  console.log(sortSpeciesByTeeth(speciesArray));
+
+
+
+
+
+
+  /*
+  Write a function, findMyKeys(), that takes in an array of strings which may or may not contain 'keys'. If the keys are in the array, your function should return the index at which they can be found. If they’re not in the array, your function should return -1.
+
+const drawer = ['rubber bands', 'tape', 'old menus', 'batteries'];
+findMyKeys(drawer);
+// Should return -1
+You can use any technique you want to accomplish this task. Though, if you look, there’s a built-in method that will make pretty quick work of it.
+
+You can test your function when you’re ready by passing in the randomStuff array or by making your own array!
+  */
+
+const findMyKeys = array => {
+    return array.findIndex(element => element === 'keys')
+  }
+  
+  // Feel free to comment out the code below to test your function
+  /**/
+  const randomStuff = ['credit card', 'screwdriver', 'receipt', 'gum', 'keys', 'used gum', 'plastic spoon'];
+  
+  console.log(findMyKeys(randomStuff))
+
+
+
+
+  /*
+  Write a function factorial() that takes a number as an argument and returns the factorial of the number.
+
+Example:
+
+factorial(6); 
+// returns `720` because 6 * 5 * 4 * 3 * 2 * 1 = 720 
+Assume only positive numbers will be given as an argument for the factorial() function.
+  */
+
+const factorial = num => {
+    for (let i = num-1; i > 0; i--) {
+      num = num * i;
+    }
+    return num
+  }
+
+//   Write a function subLength() that takes 2 parameters, a string and a single character. The function should search the string for the two occurrences of the character and return the length between them including the 2 characters. If there are less than 2 or more than 2 occurrences of the character the function should return 0.
+
+//   Examples:
+  
+//   subLength('Saturday', 'a'); // returns 6
+//   subLength('summer', 'm'); // returns 2
+//   subLength('digitize', 'i'); // returns 0
+//   subLength('cheesecake', 'k'); // returns 0
+
+// Write function below
+const subLength = (st, ch) => {
+    array = []
+    for (let i = 0; i < st.length; i++) {
+      if (st[i] === ch) {
+        array.push(i);
+      }
+    }
+    return array.length > 2 ||  array.length < 2? 0 : (array[1] - array[0])+1;
+  }
+  
+  console.log(subLength('uncopyrightable', 'u'))
