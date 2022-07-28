@@ -25,6 +25,11 @@ const reverseArray = (array) => {
     return array.slice(array.length/2);
 }
 
+
+
+
+
+
 // Write a function, greetAliens(), that takes in an array of strings and uses a for loop to print a greeting with each string in the array.
 
 // The greeting should take the following format:
@@ -35,6 +40,13 @@ const greetAliens = (array) => {
       console.log(`Oh powerful ${array[i]}, we humans offer our unconditional surrender!`);
     }
   }
+
+
+
+
+
+
+
 
 // Write a function, convertToBaby(), that takes in an array as an argument and, using a loop, returns a new array with each string in the array prepended with 'baby '.
 
@@ -50,6 +62,12 @@ const convertToBaby = (array) => {
   }
   return array;
 }
+
+
+
+
+
+
 
 // We wrote a function, smallestPowerOfTwo(), which takes in an array.
 
@@ -76,6 +94,13 @@ const smallestPowerOfTwo = (arr) => {
 }
 
 console.log(smallestPowerOfTwo(numbers))
+
+
+
+
+
+
+
 
 // 1.
 // Write a function declineEverything() that takes in an array of strings and, using .forEach(), loops through each element in the array and calls politelyDecline() with each of them.
@@ -109,6 +134,14 @@ const acceptEverything = (array) => {
       array.forEach(acceptOne);
 }
 
+
+
+
+
+
+
+
+
 // Write a function, squareNums(), that takes in an array of numbers and, using .map(), returns an array with the square of each of the elements of that array.
 
 // You can test your function when you’re ready by passing in the numbers array or by making your own array!
@@ -128,6 +161,13 @@ return map1;
 }
 
 console.log(squareNums(numbers))
+
+
+
+
+
+
+
 
 // 1.
 // Write a function shoutGreetings() that takes in an array of strings and returns a new array. This new array should contain all the strings from the argument array but with capitalized letters and an exclamation point appended to the end: 'heya' will become 'HEYA!'
@@ -159,6 +199,13 @@ const shoutGreetings = array => {
   console.log(shoutGreetings(greetings))
   // Should print [ 'HELLO!', 'HI!', 'HEYA!', 'OI!', 'HEY!', 'YO!' ]
 
+
+
+
+
+
+
+
 //   Write a function sortYears() that takes in an array of years, and, using the built-in .sort() method, returns that array with the years sorted in descending order.
 
 // You can test your function when you’re ready by passing in the years array or by making your own array of years!
@@ -172,6 +219,13 @@ const years = [1970, 1999, 1951, 1982, 1963, 2011, 2018, 1922]
 
 console.log(sortYears(years))
 // Should print [ 2018, 2011, 1999, 1982, 1970, 1963, 1951, 1922 ]
+
+
+
+
+
+
+
 
 // .
 // Write a function justCoolStuff() that takes in two arrays of strings, and, using the built-in .filter() method, returns an array with the items that are present in both arrays.
@@ -195,6 +249,12 @@ const justCoolStuff = (coolStuff, myStuff) => {
   
   console.log(justCoolStuff(myStuff, coolStuff))
   // Should print [ 'fruit-by-the-foot', 'skateboards', 'my room' ]
+
+
+
+
+
+  
 
 //   1.
 // Write a function isTheDinnerVegan() that takes in an array of food objects in the format:
@@ -329,3 +389,37 @@ const subLength = (st, ch) => {
   }
   
   console.log(subLength('uncopyrightable', 'u'))
+
+
+
+
+
+
+  /*
+  Write a function groceries() that takes an array of object literals of grocery items. The function should return a string with each item separated by a comma except the last two items should be separated by the word 'and'. Make sure spaces (' ') are inserted where they are appropriate.
+
+Examples:
+
+groceries( [{item: 'Carrots'}, {item: 'Hummus'}, {item: 'Pesto'}, {item: 'Rigatoni'}] );
+// returns 'Carrots, Hummus, Pesto and Rigatoni'
+ 
+groceries( [{item: 'Bread'}, {item: 'Butter'}] );
+// returns 'Bread and Butter'
+ 
+groceries( [{item: 'Cheese Balls'}] );
+// returns 'Cheese Balls'*/
+
+const groceries = items => {
+    let s = ''
+    for (let i = 0; i < items.length ; i++) {
+      if (items.length == 1) {
+        return items[i]['item'];
+      }
+      else if (i == items.length-2) {
+        s += items[i]['item'] + " and " + items[i+1]['item'];
+        return s;
+      }
+      s += items[i]['item'] + ", "
+    }
+    return s;
+  }
