@@ -139,12 +139,18 @@ console.log(squareNums(numbers))
 // Write your code here:
 
 // Naive solution
+// const shoutGreetings = array => {
+//     for (let i = 0; i < array.length; i++) {
+//       array[i] = array[i].toUpperCase() + "!";
+//     }
+//     return array;
+//   }
+
+//   Solution with map
 const shoutGreetings = array => {
-    for (let i = 0; i < array.length; i++) {
-      array[i] = array[i].toUpperCase() + "!";
-    }
-    return array;
-  }
+    const map1 = array.map(x => x.toUpperCase() + "!");
+    return map1;
+}
   
   // Feel free to uncomment out the code below to test your function!
   /**/
